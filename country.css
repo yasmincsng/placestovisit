@@ -1,35 +1,34 @@
-/* Japan Travel Guide - Pink Themed CSS */
 :root {
+    --primary: #ff66b2; /* Main pink shade */
+    --primary-light: #ff99cc; /* Lighter pink */
+    --primary-dark: #ff3399; /* Darker pink */
+    --secondary: #6a5acd;
+    --dark: #333; /* Dark text */
+    --light: #f8f9fa; /* Light background */
+    --gray: #555; /* Gray text */
+    --dark-gray: #343a40;
+    --background: #ffebf3; /* Soft pink background */
+    --border-color: #ffb3d9; /* Light pink border */
+    --gradient-pink: linear-gradient(135deg, #FF66B2, #FF99CC);
+    --secondary-color: #6a5acd;
     --primary-color: #ff66b2;
-    --secondary-color: #880e4f;
-    --background-color: #fce4ec;
+    --underline-color: #ffb3d9;
     --card-color: #fff;
-    --nav-bg: #ff99cc;
-    --nav-item: #ffb3c8;
-    --text-dark: #4a148c;
-    --text-light: white;
-    --gradient-pink: linear-gradient(135deg, #ff80ab, #ff4081);
-    --underline-color: #f8bbd0;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--background-color);
+    background-color: #fce4ec;
     margin: 0;
     padding: 0;
-    color: var(--text-dark);
-    line-height: 1.8;
-    padding-left: 260px; /* Add padding to account for fixed navbar */
-    min-height: 100vh;
-    display: flex;
-    overflow-x: hidden;
-    width: 100%;
+    color: #4a148c;
+    padding-left: 260px; /* Added to account for fixed navbar */
 }
 
-/* Navigation */
+/* Sidebar Navigation */
 .navbar {
     width: 220px;
-    background-color: var(--nav-bg);
+    background-color: #ff99cc;
     padding: 20px;
     position: fixed;
     height: 100%;
@@ -44,7 +43,7 @@ body {
     text-align: center;
     color: white;
     margin-bottom: 30px;
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid #ff66b2;
     padding-bottom: 5px;
     display: inline-block;
 }
@@ -60,7 +59,7 @@ body {
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
-    background-color: var(--nav-item);
+    background-color: #ffb3c8;
     border-radius: 10px;
     text-align: center;
     margin-bottom: 10px;
@@ -69,15 +68,31 @@ body {
 }
 
 .navbar a:hover {
-    background-color: var(--primary-color);
+    background-color: #ff66b2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
 
+.navbar a i {
+    margin-right: 8px;
+}
+
 .navbar .active a {
-    background-color: var(--primary-color);
-    color: var(--text-light);
+    background-color: #ff66b2;
+    color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: var(--card-color);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
 }
 
 .bio-line {

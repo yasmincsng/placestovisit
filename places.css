@@ -1,78 +1,82 @@
 :root {
-    --nav-bg: #ff99cc;
-    --nav-item: #ffb3c8;
-    --primary-color: #ff66b2;
-    --secondary-color: #880e4f;
-    --text-dark: #660033;
-    --text-light: white;
-    --nav-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
- }
- 
- body {
-     font-family: 'Arial', sans-serif;
-     background-color: #fce4ec;
-     margin: 0;
-     padding: 0;
-     color: #4a148c;
-     min-height: 100vh;
-     display: flex;
-     overflow-x: hidden;
-     width: 100%;
- }
- 
- /* Navigation */
- .navbar {
-     width: 220px;
-     background-color: var(--nav-bg);
-     padding: 20px;
-     position: fixed;
-     height: 100%;
-     top: 0;
-     left: 0;
-     box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
-     overflow-y: auto;
- }
- 
- .navbar h2 {
-     font-size: 22px;
-     text-align: center;
-     color: white;
-     margin-bottom: 30px;
-     border-bottom: 3px solid var(--primary-color);
-     padding-bottom: 5px;
-     display: inline-block;
- }
- 
- .navbar ul {
-     list-style-type: none;
-     padding-left: 0;
- }
- 
- .navbar a {
-     display: block;
-     color: #660033;
-     padding: 12px;
-     text-decoration: none;
-     font-size: 18px;
-     background-color: var(--nav-item);
-     border-radius: 10px;
-     text-align: center;
-     margin-bottom: 10px;
-     font-weight: bold;
-     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
- }
- 
- .navbar a:hover {
-     background-color: var(--primary-color);
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-     transform: scale(1.05);
- }
- 
- .navbar .active a {
-     background-color: var(--primary-color);
-     color: var(--text-light);
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
- }
+    --primary: #ff66b2; /* Main pink shade */
+    --primary-light: #ff99cc; /* Lighter pink */
+    --primary-dark: #ff3399; /* Darker pink */
+    --secondary: #6a5acd;
+    --dark: #333; /* Dark text */
+    --light: #f8f9fa; /* Light background */
+    --gray: #555; /* Gray text */
+    --dark-gray: #343a40;
+    --background: #ffebf3; /* Soft pink background */
+    --border-color: #ffb3d9; /* Light pink border */
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec;
+    margin: 0;
+    padding: 0;
+    color: #4a148c;
+}
+
+
+/* Sidebar Navigation */
+.navbar {
+    width: 220px;
+    background-color: #ff99cc;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.navbar h2 {
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #ff66b2;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.navbar a {
+    display: block;
+    color: #660033;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #ffb3c8;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: #ff66b2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.navbar a i {
+    margin-right: 8px;
+}
+
+.navbar .active a {
+    background-color: #ff66b2;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
  
  .content {
      margin-left: 240px;
